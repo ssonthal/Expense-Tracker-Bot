@@ -68,6 +68,23 @@ export class BotService {
       stop_date: 'now',
     });
   }
+  private createAsciiTable(data) {
+    const columnWidths = [];
+    data.forEach((row) => {
+      row.forEach((cell, colIndex) => {
+        columnWidths[colIndex] = Math.max(
+          columnWidths[colIndex] || 0,
+          cell.length,
+        );
+      });
+    });
+    const lines = data.map((row) =>
+      row
+        .map((cell, colIndex) => cell.padEnd(columnWidths[colIndex]))
+        .join(' | '),
+    );
+    return lines.join('\n');
+  }
   private async GetTotalExpenses(chatId, startTime, endTime) {
     this.db
       .GetDescriptiveExpensesWithinDateRange(chatId, startTime, endTime)
@@ -80,16 +97,20 @@ export class BotService {
           );
         } else {
           this.expenseObj = res;
-          const table = new Table(`${this.fromDate} to ${this.toDate}`);
-          table.setHeading('Amount', 'Cateogry', 'Description');
+          let data = new Array();
+          //   data.push([`${this.fromDate} to ${this.toDate}`]);
+          data.push(['Amount', 'Cateogry', 'Description']);
+          //   const table = new Table(`${this.fromDate} to ${this.toDate}`);
+          //   table.setHeading('Amount', 'Cateogry', 'Description');
           for (let i = 0; i < res[0].expenses.length; i++) {
             let expense = res[0].expenses[i];
-            table.addRow(
-              expense.amount,
+            data.push([
+              expense.amount.toString(),
               expense.category.name,
               expense.description,
-            );
+            ]);
           }
+          let table = this.createAsciiTable(data);
           this.bot
             .sendMessage(chatId, '```\n' + table + '\n```', {
               parse_mode: 'Markdown',
@@ -337,24 +358,6 @@ export class BotService {
         );
       } else if (query.data == 'yes_userTroubleWithDetail') {
         this.bot.deleteMessage(query.message.chat.id, query.message.message_id);
-        // CreatePDFStructureAndSavePDF().then(() => {
-        //   // const documentPath = "output.pdf";
-        //   // this.bot
-        //   //   .sendDocument(query.message.chat.id, documentPath, {
-        //   //     caption: "Expense Recrods",
-        //   //   })
-        //   //   .then((sentMessage) => {
-        //   //     console.log(
-        //   //       "Document sent successfully:",
-        //   //       sentMessage.document.file_name
-        //   //     );
-        //   //   })
-        //   //   .catch((error) => {
-        //   //     console.error("Error sending document:", error.message);
-        //   //   });
-        //   // this.bot.sendDocument;
-        // });
-        // create a PDF to send the details
       } else if (query.data == 'no_userTroubleWithDetail') {
         this.bot.deleteMessage(query.message.chat.id, query.message.message_id);
       }
