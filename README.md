@@ -10,9 +10,14 @@ It's a Telegram bot for managing and analyzing your day-to-day expenses. Install
 
 
 ## Screenshots
+### Adding a New Expense - 
+<img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/add_new_expense.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/add_new_expense.png" width="200" height="400" />    <img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/expense_added_success.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/expense_added_success.png" width="200" height="400" />  
 
+### Get Expense Details - 
+<img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/choose_start_date.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/choose_start_date.png" width="200" height="400" />    <img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/choose_start_date.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/choose_start_date.png" width="200" height="400" />    <img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/get_details.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/get_details.png" width="200" height="400" />
 
-
+### Add a new expense Category - 
+ <img src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/new_category_added.png" data-canonical-src="https://github.com/shubham-sonthalia/ExpenseTracker/blob/main/screenshots/new_category_added.png" width="250" height="300" />
 
 ## Features
 
