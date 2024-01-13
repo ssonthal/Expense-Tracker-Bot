@@ -76,10 +76,8 @@ To run this project, you will need to add the following environment variables to
 
 ## Tech Stack
 
-**Server:** NestJS, MongoClient
+**Server:** <img src="https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg" width = 25 alt="Nest JS" />
 
-**Database:** MongoDB
+**Database:** <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width = 25 alt="MongoDB" />
 
-**Deployment:** AWS EC2
-
-
+**Deployment:** <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" width = 25 alt="AWS EC2" /> 
