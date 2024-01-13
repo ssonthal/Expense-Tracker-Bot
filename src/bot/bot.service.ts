@@ -98,10 +98,7 @@ export class BotService {
         } else {
           this.expenseObj = res;
           let data = new Array();
-          data.push([`${this.fromDate} to ${this.toDate}`]);
           data.push(['Amount', 'Cateogry', 'Description']);
-          //   const table = new Table(`${this.fromDate} to ${this.toDate}`);
-          //   table.setHeading('Amount', 'Cateogry', 'Description');
           for (let i = 0; i < res[0].expenses.length; i++) {
             let expense = res[0].expenses[i];
             data.push([
