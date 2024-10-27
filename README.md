@@ -75,54 +75,6 @@ To run this project, you will need to add the following environment variables to
 
 ## Removing dependency on NestJS opinionated architecture and using pure NodeJS logi  and the below code structure for modular code architecture. 
 
-`expense-bot/
+<img width="571" alt="Screenshot 2024-10-27 at 7 05 45 PM" src="https://github.com/user-attachments/assets/45fdf326-e26c-4881-99a5-497cebe52dd7">
 
-├── src/
-
-│   ├── bot/
-
-│   │   ├── commands/                # Folder for command-specific files
-
-│   │   │   ├── start.js             # /start command handler
-
-│   │   │   ├── addExpense.js        # Command to add expenses
-
-│   │   │   ├── splitExpense.js      # Command to split expenses
-
-│   │   │   └── viewBalance.js       # Command to view balances
-
-│   │   └── index.js                 # Initializes the bot, sets up commands
-
-│   ├── controllers/                 # Core logic for expenses, calculations, etc.
-
-│   │   ├── expenseController.js     # Handles expense-related logic
-
-
-│   │   └── userController.js        # Handles user-related actions
-
-│   ├── models/                      # Database models
-
-│   │   ├── expense.js               # Expense model (defines schema)
-
-│   │   └── user.js                  # User model (defines schema)
-
-│   ├── services/                    # Services for calculations and data processing
-
-│   │   └── paymentSimplification.js # Logic for payment simplification algorithms
-
-│   ├── config/                      # Configuration files (e.g., for env variables)
-
-│   │   └── dbConfig.js              # Database connection config
-
-│   ├── utils/                       # Utility functions
-
-│   │   └── helpers.js               # Helper functions like currency formatting
-
-│   ├── index.js                     # Main entry point, initializes bot and server
-
-├── .env                             # Environment variables (e.g., TOKEN, DB URI)
-
-├── package.json
-
-└── README.md`
 
