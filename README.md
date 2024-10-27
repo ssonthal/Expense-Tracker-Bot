@@ -73,11 +73,31 @@ To run this project, you will need to add the following environment variables to
 
 - Improved User Experience
 
+## Removing dependency on NestJS opinionated architecture and using pure NodeJS logi  and the below code structure for modular code architecture. 
 
-## Tech Stack
+expense-bot/
+├── src/
+│   ├── bot/
+│   │   ├── commands/                # Folder for command-specific files
+│   │   │   ├── start.js             # /start command handler
+│   │   │   ├── addExpense.js        # Command to add expenses
+│   │   │   ├── splitExpense.js      # Command to split expenses
+│   │   │   └── viewBalance.js       # Command to view balances
+│   │   └── index.js                 # Initializes the bot, sets up commands
+│   ├── controllers/                 # Core logic for expenses, calculations, etc.
+│   │   ├── expenseController.js     # Handles expense-related logic
+│   │   └── userController.js        # Handles user-related actions
+│   ├── models/                      # Database models
+│   │   ├── expense.js               # Expense model (defines schema)
+│   │   └── user.js                  # User model (defines schema)
+│   ├── services/                    # Services for calculations and data processing
+│   │   └── paymentSimplification.js # Logic for payment simplification algorithms
+│   ├── config/                      # Configuration files (e.g., for env variables)
+│   │   └── dbConfig.js              # Database connection config
+│   ├── utils/                       # Utility functions
+│   │   └── helpers.js               # Helper functions like currency formatting
+│   ├── index.js                     # Main entry point, initializes bot and server
+├── .env                             # Environment variables (e.g., TOKEN, DB URI)
+├── package.json
+└── README.md
 
-**Server:** <img src="https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg" width = 25 alt="Nest JS" />
-
-**Database:** <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width = 25 alt="MongoDB" />
-
-**Deployment:** <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" width = 25 alt="AWS EC2" /> 
