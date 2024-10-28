@@ -73,11 +73,8 @@ To run this project, you will need to add the following environment variables to
 
 - Improved User Experience
 
+## Removing dependency on NestJS opinionated architecture and using pure NodeJS logi  and the below code structure for modular code architecture. 
 
-## Tech Stack
+<img width="571" alt="Screenshot 2024-10-27 at 7 05 45 PM" src="https://github.com/user-attachments/assets/45fdf326-e26c-4881-99a5-497cebe52dd7">
 
-**Server:** <img src="https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg" width = 25 alt="Nest JS" />
 
-**Database:** <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width = 25 alt="MongoDB" />
-
-**Deployment:** <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" width = 25 alt="AWS EC2" /> 
